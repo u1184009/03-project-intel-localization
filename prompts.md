@@ -1,3 +1,4 @@
+## Project 2
 # Prompt1
 Using the given .html and using simple only HTML and CSS, create a website with the following layout and create an addition file called style.css:
 - Top half, centered, a light blue background, the intel logo.svg, the header and the exploartion text
@@ -20,3 +21,10 @@ Ensure each timeline scrolls horizontally on larger screens and veritically on s
 
 # Prompt4
 Make each of the timelines snap with to the start of each card horizontally for large screens and vertically for smaller screens
+
+## Project 3
+# Prompt1
+Seperate the main section and body section so the samantics (use articles, sections, etc...) don't mix while keeping it documented, clean, and simple. Using Bootstrap's grid system,  create a 3 column lay out for the body contents. Add a RTL for localization using Bootstrap. Add icons for the corresponding columns using Font Awesome:
+-droplet to Water & Waste
+-handshake to Commitment
+-squared arrow up right to RISE
