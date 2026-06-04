@@ -1,0 +1,355 @@
+/* Add your CSS here */
+/* =========================
+   GLOBAL PAGE STYLING
+   ========================= */
+
+/* Removes default browser spacing */
+body {
+  margin: 0;
+  padding: 0;
+
+  /* Simple clean font */
+  font-family: Arial, Helvetica, sans-serif;
+
+  /* Centers text by default */
+  text-align: center;
+
+  /* Light grey background for entire page */
+  background-color: #e5e5e5;
+}
+
+
+/* =========================
+   TOP HERO SECTION
+   ========================= */
+
+/* Styles the header section */
+header {
+  /* Darker Intel-style blue background */
+  background-color: #0071c5;
+
+  /* Makes the top section take about half the screen */
+  min-height: 50vh;
+
+  /* Uses flexbox to center content */
+  display: flex;
+
+  /* Centers horizontally */
+  justify-content: center;
+
+  /* Centers vertically */
+  align-items: center;
+
+  /* Adds spacing inside */
+  padding: 40px;
+}
+
+
+/* Controls the content inside the header */
+header div {
+  max-width: 700px;
+}
+
+
+/* Intel logo styling */
+header img {
+  /* Controls logo size */
+  width: 180px;
+
+  /* Space below logo */
+  margin-bottom: 20px;
+}
+
+
+/* Main title styling */
+header h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+
+  /* Dark text for readability */
+  color: #e5e5e5;
+}
+
+
+/* Paragraph text under heading */
+header p {
+  font-size: 18px;
+  line-height: 1.6;
+
+  /* Slightly darker grey text */
+  color: #e5e5e5;
+}
+
+
+/* =========================
+   TIMELINE SECTION
+   ========================= */
+
+/* Main timeline container */
+section {
+
+  /* Light grey background */
+  background-color: #e5e5e5;
+
+  /* Displays cards in a row */
+  display: flex;
+
+  /* Keeps cards on one line for horizontal scrolling */
+  flex-wrap: nowrap;
+
+  /* Adds spacing between cards */
+  gap: 20px;
+
+  /* Adds space around section */
+  padding: 50px 20px;
+
+  /* Enables horizontal scrolling */
+  overflow-x: auto;
+
+  /* Prevents vertical scrollbar */
+  overflow-y: hidden;
+
+  /* Smooth scrolling effect */
+  scroll-behavior: smooth;
+
+  /*Scroll snapping for horizontal shift*/
+  scroll-snap-type: x mandatory;
+}
+
+
+/* =========================
+   TIMELINE CARD STYLING
+   ========================= */
+
+/* Each timeline card */
+section div {
+
+  /* Needed for hover overlay positioning */
+  position: relative;
+
+  /* Prevents cards from shrinking */
+  flex: 0 0 260px;
+
+  /* White background */
+  background-color: white;
+
+  /* Rounded corners */
+  border-radius: 10px;
+
+  /* Internal spacing */
+  padding: 20px;
+
+  /* Hides overlay overflow */
+  overflow: hidden;
+
+  /* Soft shadow */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+
+  /* Smooth animation */
+  transition: transform 0.3s ease-in-out;
+
+  /*Scroll snapping to start of each card*/
+  scroll-snap-align: start;
+}
+
+
+/* Card hover animation */
+section div:hover, 
+section div:focus{
+  transform: scale(1.05);
+}
+
+
+/* =========================
+   IMAGE STYLING
+   ========================= */
+
+/* Timeline images */
+section div img {
+
+  /* Makes image fit card width */
+  width: 100%;
+
+  /* Consistent image height */
+  height: 140px;
+
+  /* Prevents stretching */
+  object-fit: cover;
+
+  /* Rounded image corners */
+  border-radius: 8px;
+
+  /* Space below image */
+  margin-bottom: 15px;
+}
+
+
+/* =========================
+   DESCRIPTION HOVER EFFECT
+   ========================= */
+
+/* Timeline description paragraph */
+section div p {
+
+  /* Positions text over card */
+  position: absolute;
+
+  /* Places overlay at top-left */
+  top: 0;
+  left: 0;
+
+  /* Covers entire card */
+  width: 100%;
+  height: 100%;
+
+  /* Matches top blue section */
+  background-color: #0071c5;
+
+  /* Centers text */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* Adds spacing inside overlay */
+  padding: 20px;
+
+  /* Prevents padding overflow */
+  box-sizing: border-box;
+
+  /* Text styling */
+  color: white;
+  font-weight: bold;
+  line-height: 1.6;
+
+  /* Hidden by default */
+  opacity: 0;
+
+  /* Smooth fade animation */
+  transition: opacity 0.3s ease-in-out;
+}
+
+
+/* Shows description on hover */
+section div:hover p {
+  opacity: 1;
+}
+
+
+/* =========================
+   HEADING STYLING
+   ========================= */
+
+section h2 {
+  color: #0071c5;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+section h3 {
+  color: #222;
+  margin-bottom: 15px;
+}
+
+
+/* =========================
+   MOBILE RESPONSIVE LAYOUT
+   ========================= */
+
+/* Activates on smaller screens */
+@media (max-width: 600px) {
+
+  /* Main title styling */
+header h1 {
+  font-size: 30px;
+}
+
+
+/* Paragraph text under heading */
+header p {
+  font-size: 20px;
+}
+
+  section {
+
+    /* Stack cards vertically */
+    flex-direction: column;
+
+    /* Centers cards */
+    align-items: center;
+
+    /* Creates vertical scrolling container */
+    overflow-y: auto;
+
+    /* Removes horizontal scrolling */
+    overflow-x: hidden;
+
+    /* Limits section height so scrolling exists */
+    max-height: 80vh;
+  }
+
+  section div {
+
+    /* Wider mobile cards */
+    width: 90%;
+
+    /* Prevents flex sizing issues */
+    flex: none;
+  }
+}
+
+
+/* Year heading */
+section h2 {
+  color: #0071c5;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+
+/* Card title */
+section h3 {
+  color: #222;
+  margin-bottom: 15px;
+}
+
+
+/* Card paragraph text */
+section p {
+  color: #555;
+  line-height: 1.5;
+}
+
+
+/* =========================
+   BOTTOM INSTRUCTION TEXT
+   ========================= */
+
+/* Styles the final paragraph */
+body > p {
+  padding-bottom: 30px;
+  color: #444;
+  font-weight: bold;
+}
+
+/* =========================
+   TIMELINE IMAGE STYLING
+   ========================= */
+
+/* Styles all images inside timeline cards */
+section div img {
+
+  /* Makes image fit nicely inside card */
+  width: 100%;
+
+  /* Keeps all images same height */
+  height: 140px;
+
+  /* Prevents stretched images */
+  object-fit: cover;
+
+  /* Rounded image corners */
+  border-radius: 8px;
+
+  /* Adds spacing above/below image */
+  margin-bottom: 15px;
+}
