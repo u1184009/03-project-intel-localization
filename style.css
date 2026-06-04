@@ -1,355 +1,280 @@
-/* Add your CSS here */
 /* =========================
-   GLOBAL PAGE STYLING
-   ========================= */
+   GLOBAL
+========================= */
 
-/* Removes default browser spacing */
 body {
   margin: 0;
   padding: 0;
-
-  /* Simple clean font */
   font-family: Arial, Helvetica, sans-serif;
-
-  /* Centers text by default */
   text-align: center;
-
-  /* Light grey background for entire page */
   background-color: #e5e5e5;
 }
 
-
 /* =========================
-   TOP HERO SECTION
-   ========================= */
+   HERO SECTION
+========================= */
 
-/* Styles the header section */
-header {
-  /* Darker Intel-style blue background */
+.hero {
   background-color: #0071c5;
-
-  /* Makes the top section take about half the screen */
   min-height: 50vh;
 
-  /* Uses flexbox to center content */
   display: flex;
-
-  /* Centers horizontally */
   justify-content: center;
-
-  /* Centers vertically */
   align-items: center;
 
-  /* Adds spacing inside */
   padding: 40px;
 }
 
-
-/* Controls the content inside the header */
-header div {
+.hero-content {
   max-width: 700px;
 }
 
-
-/* Intel logo styling */
-header img {
-  /* Controls logo size */
+.hero img {
   width: 180px;
-
-  /* Space below logo */
   margin-bottom: 20px;
 }
 
-
-/* Main title styling */
-header h1 {
+.hero h1 {
   font-size: 48px;
   margin-bottom: 20px;
-
-  /* Dark text for readability */
   color: #e5e5e5;
 }
 
-
-/* Paragraph text under heading */
-header p {
+.hero p {
   font-size: 18px;
   line-height: 1.6;
-
-  /* Slightly darker grey text */
   color: #e5e5e5;
 }
-
 
 /* =========================
    TIMELINE SECTION
-   ========================= */
+========================= */
 
-/* Main timeline container */
-section {
-
-  /* Light grey background */
+.timeline {
   background-color: #e5e5e5;
 
-  /* Displays cards in a row */
   display: flex;
-
-  /* Keeps cards on one line for horizontal scrolling */
   flex-wrap: nowrap;
 
-  /* Adds spacing between cards */
   gap: 20px;
 
-  /* Adds space around section */
   padding: 50px 20px;
 
-  /* Enables horizontal scrolling */
   overflow-x: auto;
-
-  /* Prevents vertical scrollbar */
   overflow-y: hidden;
 
-  /* Smooth scrolling effect */
   scroll-behavior: smooth;
-
-  /*Scroll snapping for horizontal shift*/
   scroll-snap-type: x mandatory;
 }
 
-
 /* =========================
-   TIMELINE CARD STYLING
-   ========================= */
+   TIMELINE CARDS
+========================= */
 
-/* Each timeline card */
-section div {
-
-  /* Needed for hover overlay positioning */
+.timeline-card {
   position: relative;
 
-  /* Prevents cards from shrinking */
   flex: 0 0 260px;
+  min-width: 260px;
+  max-width: 260px;
 
-  /* White background */
-  background-color: white;
+  background-color: #ffffff;
 
-  /* Rounded corners */
   border-radius: 10px;
 
-  /* Internal spacing */
   padding: 20px;
 
-  /* Hides overlay overflow */
   overflow: hidden;
 
-  /* Soft shadow */
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 
-  /* Smooth animation */
   transition: transform 0.3s ease-in-out;
 
-  /*Scroll snapping to start of each card*/
   scroll-snap-align: start;
 }
 
-
-/* Card hover animation */
-section div:hover, 
-section div:focus{
+.timeline-card:hover,
+.timeline-card:focus-within {
   transform: scale(1.05);
 }
 
+/* =========================
+   TIMELINE HEADINGS
+========================= */
+
+.timeline-card h3 {
+  color: #0071c5;
+
+  font-size: 2rem;
+  font-weight: 700;
+
+  margin-top: 0;
+  margin-bottom: 10px;
+
+  line-height: 1.2;
+}
+
+.timeline-card h4 {
+  color: #222;
+  font-size: 1.1rem;
+  font-weight: bold;
+
+  margin-bottom: 15px;
+
+  min-height: 52px;
+}
 
 /* =========================
-   IMAGE STYLING
-   ========================= */
+   TIMELINE IMAGES
+========================= */
 
-/* Timeline images */
-section div img {
-
-  /* Makes image fit card width */
+.timeline-card img {
   width: 100%;
-
-  /* Consistent image height */
   height: 140px;
 
-  /* Prevents stretching */
+  display: block;
+
   object-fit: cover;
 
-  /* Rounded image corners */
   border-radius: 8px;
 
-  /* Space below image */
   margin-bottom: 15px;
 }
 
-
 /* =========================
-   DESCRIPTION HOVER EFFECT
-   ========================= */
+   TIMELINE DESCRIPTION
+========================= */
 
-/* Timeline description paragraph */
-section div p {
-
-  /* Positions text over card */
+.timeline-card p {
   position: absolute;
 
-  /* Places overlay at top-left */
   top: 0;
   left: 0;
 
-  /* Covers entire card */
   width: 100%;
   height: 100%;
 
-  /* Matches top blue section */
   background-color: #0071c5;
 
-  /* Centers text */
   display: flex;
   justify-content: center;
   align-items: center;
 
-  /* Adds spacing inside overlay */
   padding: 20px;
 
-  /* Prevents padding overflow */
   box-sizing: border-box;
 
-  /* Text styling */
-  color: white;
+  color: #ffffff;
   font-weight: bold;
   line-height: 1.6;
 
-  /* Hidden by default */
   opacity: 0;
 
-  /* Smooth fade animation */
   transition: opacity 0.3s ease-in-out;
 }
 
-
-/* Shows description on hover */
-section div:hover p {
+.timeline-card:hover p {
   opacity: 1;
 }
 
-
 /* =========================
-   HEADING STYLING
-   ========================= */
+   TIMELINE INSTRUCTIONS
+========================= */
 
-section h2 {
-  color: #0071c5;
-  font-size: 2rem;
-  margin-bottom: 10px;
-}
-
-section h3 {
-  color: #222;
-  margin-bottom: 15px;
-}
-
-
-/* =========================
-   MOBILE RESPONSIVE LAYOUT
-   ========================= */
-
-/* Activates on smaller screens */
-@media (max-width: 600px) {
-
-  /* Main title styling */
-header h1 {
-  font-size: 30px;
-}
-
-
-/* Paragraph text under heading */
-header p {
-  font-size: 20px;
-}
-
-  section {
-
-    /* Stack cards vertically */
-    flex-direction: column;
-
-    /* Centers cards */
-    align-items: center;
-
-    /* Creates vertical scrolling container */
-    overflow-y: auto;
-
-    /* Removes horizontal scrolling */
-    overflow-x: hidden;
-
-    /* Limits section height so scrolling exists */
-    max-height: 80vh;
-  }
-
-  section div {
-
-    /* Wider mobile cards */
-    width: 90%;
-
-    /* Prevents flex sizing issues */
-    flex: none;
-  }
-}
-
-
-/* Year heading */
-section h2 {
-  color: #0071c5;
-  font-size: 2rem;
-  margin-bottom: 10px;
-}
-
-
-/* Card title */
-section h3 {
-  color: #222;
-  margin-bottom: 15px;
-}
-
-
-/* Card paragraph text */
-section p {
-  color: #555;
-  line-height: 1.5;
-}
-
-
-/* =========================
-   BOTTOM INSTRUCTION TEXT
-   ========================= */
-
-/* Styles the final paragraph */
-body > p {
+.timeline-instructions {
   padding-bottom: 30px;
+
   color: #444;
   font-weight: bold;
 }
 
 /* =========================
-   TIMELINE IMAGE STYLING
-   ========================= */
+   BOOTSTRAP GRID SECTION
+========================= */
 
-/* Styles all images inside timeline cards */
-section div img {
+.card {
+  border: none;
 
-  /* Makes image fit nicely inside card */
-  width: 100%;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
 
-  /* Keeps all images same height */
-  height: 140px;
+.card:hover {
+  transform: translateY(-5px);
 
-  /* Prevents stretched images */
-  object-fit: cover;
+  box-shadow:
+    0 8px 16px rgba(0, 0, 0, 0.15) !important;
+}
 
-  /* Rounded image corners */
-  border-radius: 8px;
+.btn-primary {
+  background-color: #0071c5;
+  border-color: #0071c5;
+}
 
-  /* Adds spacing above/below image */
-  margin-bottom: 15px;
+.btn-primary:hover {
+  background-color: #005a9e;
+  border-color: #005a9e;
+}
+
+/* =========================
+   NEWSLETTER SECTION
+========================= */
+
+.newsletter-section {
+  background-color: #ffffff;
+}
+
+.newsletter-section h2 {
+  color: #0071c5;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* =========================
+   RTL SUPPORT
+========================= */
+
+[dir="rtl"] .timeline {
+  direction: rtl;
+}
+
+[dir="rtl"] .hero-content,
+[dir="rtl"] .card-body,
+[dir="rtl"] .newsletter-section {
+  text-align: right;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+  .hero h1 {
+    font-size: 30px;
+  }
+
+  .hero p {
+    font-size: 20px;
+  }
+
+  .timeline {
+    flex-direction: column;
+
+    align-items: center;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    max-height: 80vh;
+  }
+
+  .timeline-card {
+    width: 90%;
+    min-width: auto;
+    max-width: none;
+
+    flex: none;
+  }
 }
