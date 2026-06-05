@@ -28,3 +28,12 @@ Seperate the main section and body section so the samantics (use articles, secti
 -droplet to Water & Waste
 -handshake to Commitment
 -squared arrow up right to RISE
+
+# Prompt2
+Use JavaScript to detect when Google Translate changes the page language and apply RTL mode if the detected language is right-to-left. Ensure it updates dynamically when the translation changes.
+
+# Prompt3
+Add a form class with the "Subscribe to our Newsletter" using Bootstrap, make it note to "add email here to subscribe" as well. Add a footer with place holder links to Terms of Use, Contact, Privacy Policy.  
+
+# Prompt4 
+Add more discriptive alt-attributes to each image to improve accessiblility. Lighthouse gives an accessbility score of 95 and says the back and foreground do not have sufficient contrast ratio, improve the contrast just a bit while keeping the same color scheme of the page.  

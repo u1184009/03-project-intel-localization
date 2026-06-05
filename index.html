@@ -55,7 +55,7 @@
     <article class="timeline-card">
       <h3>1968</h3>
       <h4>Intel Founded</h4>
-      <img src="img/1.jpg" alt="Intel Founded 1968">
+      <img src="img/1.jpg" alt="Intel founded (1968) — Robert Noyce and Gordon Moore establish Intel">
       <p>
         Robert Noyce and Gordon Moore rename the newly formed company
         NM Electronics to Intel Corporation, laying the foundation for
@@ -66,7 +66,7 @@
     <article class="timeline-card">
       <h3>1971</h3>
       <h4>First Microprocessor</h4>
-      <img src="img/2.jpg" alt="First Microprocessor 1971">
+      <img src="img/2.jpg" alt="First commercial microprocessor (1971) — Intel 4004 chip close-up">
       <p>
         Intel debuts the 4004, the world's first commercial microprocessor,
         igniting the microprocessor revolution.
@@ -76,7 +76,7 @@
     <article class="timeline-card">
       <h3>1978</h3>
       <h4>8086 Processor</h4>
-      <img src="img/3.jpg" alt="8086 Processor 1978">
+      <img src="img/3.jpg" alt="8086 processor (1978) — early x86 architecture chip">
       <p>
         Launch of the 8086 processor, establishing the x86 architecture.
       </p>
@@ -85,7 +85,7 @@
     <article class="timeline-card">
       <h3>1985</h3>
       <h4>386 Processor</h4>
-      <img src="img/4.jpg" alt="386 Processor 1985">
+      <img src="img/4.jpg" alt="Intel 386 processor (1985) — 32-bit architecture chip">
       <p>
         Intel introduces the 386 processor with 32-bit architecture.
       </p>
@@ -94,7 +94,7 @@
     <article class="timeline-card">
       <h3>2006</h3>
       <h4>Peak GHG Emissions</h4>
-      <img src="img/5greenhouse_emission.jpg" alt="Greenhouse Emissions 2006">
+      <img src="img/5greenhouse_emission.jpg" alt="Peak greenhouse gas emissions site (2006) — industrial emissions imagery">
       <p>
         Intel reaches its highest annual greenhouse gas emissions and begins
         major investments in reduction programs.
@@ -104,7 +104,7 @@
     <article class="timeline-card">
       <h3>2020</h3>
       <h4>RISE Strategy</h4>
-      <img src="img/6plan_for_future.jpg" alt="RISE Strategy 2020">
+      <img src="img/6plan_for_future.jpg" alt="RISE strategy launch (2020) — planning and sustainability goals illustration">
       <p>
         Intel launches its RISE strategy and ambitious 2030 goals.
       </p>
@@ -113,7 +113,7 @@
     <article class="timeline-card">
       <h3>2022</h3>
       <h4>Net-Zero by 2040</h4>
-      <img src="img/7zero_ghg.jpg" alt="Net Zero Greenhouse Gas 2022">
+      <img src="img/7zero_ghg.jpg" alt="Net-zero commitment (2022) — illustrative zero emissions concept">
       <p>
         Intel commits to achieving net-zero Scope 1 and Scope 2 emissions
         by 2040.
@@ -123,7 +123,7 @@
     <article class="timeline-card">
       <h3>2023</h3>
       <h4>Renewable Electricity</h4>
-      <img src="img/8renewable_energy.jpg" alt="Renewable Electricity 2023">
+      <img src="img/8renewable_energy.jpg" alt="Renewable electricity (2023) — solar panels and wind turbines, representing renewable energy sources">
       <p>
         Intel achieves 99% renewable electricity usage globally.
       </p>
@@ -132,7 +132,7 @@
     <article class="timeline-card">
       <h3>2024</h3>
       <h4>Sustainability Summit</h4>
-      <img src="img/9presentation.jpg" alt="Sustainability Summit 2024">
+      <img src="img/9presentation.jpg" alt="Sustainability Summit (2024) — sustainability presentation with audience">
       <p>
         Intel hosts its first Sustainability Summit.
       </p>
@@ -238,11 +238,51 @@
   aria-labelledby="newsletter-heading"
 >
   <div class="container">
-    <h2 id="newsletter-heading">
-      Subscribe to our Newsletter
-    </h2>
+    <h2 id="newsletter-heading">Subscribe to our Newsletter</h2>
+
+    <form
+      class="row g-2 justify-content-center align-items-center mt-4"
+      action="#"
+      method="post"
+      novalidate
+    >
+      <div class="col-auto">
+        <label for="newsletterEmail" class="visually-hidden">Email</label>
+        <input
+          type="email"
+          class="form-control"
+          id="newsletterEmail"
+          name="email"
+          placeholder="Add email here "
+          aria-label="Email address"
+          required
+        />
+      </div>
+
+      <div class="col-auto">
+        <button type="submit" class="btn btn-primary">Subscribe</button>
+      </div>
+    </form>
   </div>
 </section>
+
+<!-- FOOTER -->
+<footer class="bg-light py-4">
+  <div class="container text-center">
+    <nav class="nav justify-content-center">
+      <a class="nav-link px-3" href="#">Terms of Use</a>
+      <a class="nav-link px-3" href="#">Contact</a>
+      <a class="nav-link px-3" href="#">Privacy Policy</a>
+    </nav>
+    <p class="small text-muted mb-0 mt-2">&copy; <span id="year"></span> Intel, Mike Pham — All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  // Set current year in footer
+  const yearEl = document.getElementById('year');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+</script>
 
 <!-- Bootstrap -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
@@ -263,6 +303,75 @@ function toggleRTL() {
       "https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css";
   }
 }
+</script>
+
+<!-- RTL Auto-detect for Google Translate -->
+<script>
+// Detect changes to the page language (e.g., from Google Translate)
+// and switch the document direction and Bootstrap stylesheet accordingly.
+(function () {
+  const html = document.documentElement;
+  const bootstrap = document.getElementById("bootstrapCSS");
+  const RTL_CSS =
+    "https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.rtl.min.css";
+  const LTR_CSS =
+    "https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css";
+
+  // Common right-to-left language codes (ISO 639-1 / prefixes)
+  const rtlLangs = new Set([
+    "ar",
+    "he",
+    "fa",
+    "ur",
+    "dv",
+    "ps",
+    "ku",
+    "sd",
+    "ug",
+    "yi",
+  ]);
+
+  function applyDirForLang(lang) {
+    if (!lang) return;
+    const short = lang.split("-")[0].toLowerCase();
+    if (rtlLangs.has(short)) {
+      if (html.dir !== "rtl") {
+        html.setAttribute("dir", "rtl");
+        if (bootstrap) bootstrap.href = RTL_CSS;
+      }
+    } else {
+      if (html.dir !== "ltr") {
+        html.setAttribute("dir", "ltr");
+        if (bootstrap) bootstrap.href = LTR_CSS;
+      }
+    }
+  }
+
+  // Observe attribute changes on the <html> element (e.g., lang attr)
+  const observer = new MutationObserver((mutations) => {
+    for (const m of mutations) {
+      if (m.type === "attributes" && m.attributeName === "lang") {
+        applyDirForLang(html.getAttribute("lang") || html.lang);
+      }
+    }
+  });
+
+  observer.observe(html, { attributes: true });
+
+  // Poll fallback for cases where the translation updates an iframe or cookie
+  // (checks every 500ms and applies changes when detected)
+  let last = html.getAttribute("lang") || html.lang || "";
+  setInterval(() => {
+    const current = html.getAttribute("lang") || html.lang || "";
+    if (current !== last) {
+      last = current;
+      applyDirForLang(current);
+    }
+  }, 500);
+
+  // Apply on initial load if language already set
+  applyDirForLang(html.getAttribute("lang") || html.lang || "");
+})();
 </script>
 
 </body>

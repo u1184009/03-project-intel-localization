@@ -15,7 +15,7 @@ body {
 ========================= */
 
 .hero {
-  background-color: #0071c5;
+  background-color: #005a9e;
   min-height: 50vh;
 
   display: flex;
@@ -37,13 +37,13 @@ body {
 .hero h1 {
   font-size: 48px;
   margin-bottom: 20px;
-  color: #e5e5e5;
+  color: #ffffff;
 }
 
 .hero p {
   font-size: 18px;
   line-height: 1.6;
-  color: #e5e5e5;
+  color: #ffffff;
 }
 
 /* =========================
@@ -103,7 +103,7 @@ body {
 ========================= */
 
 .timeline-card h3 {
-  color: #0071c5;
+  color: #005a9e;
 
   font-size: 2rem;
   font-weight: 700;
@@ -154,7 +154,7 @@ body {
   width: 100%;
   height: 100%;
 
-  background-color: #0071c5;
+  background-color: #005a9e;
 
   display: flex;
   justify-content: center;
@@ -208,13 +208,13 @@ body {
 }
 
 .btn-primary {
-  background-color: #0071c5;
-  border-color: #0071c5;
+  background-color: #005a9e;
+  border-color: #005a9e;
 }
 
 .btn-primary:hover {
-  background-color: #005a9e;
-  border-color: #005a9e;
+  background-color: #004673;
+  border-color: #004673;
 }
 
 /* =========================
@@ -226,7 +226,7 @@ body {
 }
 
 .newsletter-section h2 {
-  color: #0071c5;
+  color: #005a9e;
   font-weight: 700;
   margin: 0;
 }
